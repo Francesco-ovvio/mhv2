@@ -95,32 +95,54 @@ h1 a.button:hover{
 }
 
 /* NavBar interattiva mobile per dispositivi touchscreen*/
-label{
-    position: fixed;
-    left: -120px;
+#mobile{
+    display: none;
+}
+
+.sidenav{
+    position:fixed;
     top: 0;
-    width: 140px;
-    height: 100vh;
-    background-color: rgba(77, 89, 13, .8);
-    padding: 20px 20px 5px 20px;
-    border-radius: 20px;
-
-    display: none;
-    flex-direction: column;
-    align-items: left;
+    left: 0;
+    overflow: hidden;
+    background-color: rgb(204, 139, 65);
+    height: 100%;
+    width: 0;
     z-index: 3;
+    transition: 0.5s;
+    padding-top: 15px;
 }
 
-#check{
-    display: none;
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
 }
 
-.spcwarp{
-    margin-bottom: 25px;
+.sidenav a:hover{
+    color: #818181;
 }
 
-label:checked, label:hover{
-    left: -20px;
+.sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#burger{
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width:768px){
+    #mobile{
+        display: initial;
+    }
 }
 
 /* NavBar per dispositivi desktop*/
@@ -273,6 +295,7 @@ section.type-c p strong{
     font-family: 'Segoe UI', sans-serif;
     font-size: .6em;
     text-align: left;
+    display: none;
 }
 
 /* Impostazioni del footer */
@@ -319,7 +342,7 @@ footer address{
         padding: .5em;
         font-size: .75em;
     }
-    .logo, nav, .logopicc{
+    .logo, .menu, .dx, .logopicc{
         display: none;
     }
     header {
