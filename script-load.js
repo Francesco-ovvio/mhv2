@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
             var button = document.createElement('button');
             button.className = 'btn';
+            button.id = 'btn'+i;
             button.setAttribute('onclick', 'addFav('+i+')');
             button.textContent = 'Aggiungi ai preferiti';
             div.appendChild(button);
