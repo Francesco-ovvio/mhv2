@@ -16,7 +16,11 @@ document.addEventListener('DOMContentLoaded', function(){
             img.src = immagini[i];
             div.appendChild(img);
 
-            /*form cart*/
+            var button = document.createElement('button');
+            button.className = 'btn';
+            button.setAttribute('onclick', 'addFav('+i+')');
+            button.textContent = 'Aggiungi ai preferiti';
+            div.appendChild(button);
 
             var descr = document.createElement('div');
             descr.className = 'descr';

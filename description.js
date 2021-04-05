@@ -25,3 +25,22 @@ function search(){
         }
     }
 }
+
+function addFav(id){
+    var prefItem, prefGrid;
+    prefGrid = document.getElementById('prefProd');
+    prefItem = document.getElementById('prodotto'+id);
+    prefItem.setAttribute('onclick', 'remFav('+id+')');
+
+    prefGrid.appendChild(prefItem);
+}
+
+function remFav(id){
+    var remItem, prodGrid;
+    prodGrid = document.getElementById('product-grid');
+    console.log(prodGrid);
+    /*remItem = document.getElementById('prodotto'+id);
+    remItem.setAttribute = ('onclick', 'addFav('+id+')');*/
+
+    /*prodGrid.appendChild(remItem);*/
+}
