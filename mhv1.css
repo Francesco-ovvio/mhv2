@@ -261,12 +261,20 @@ section.type-c p strong{
     padding: 12px 20px 12px 40px; 
     border: 1px solid #ddd;
     margin-bottom: 12px; 
-  }
+}
 
 .product-grid{
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;
+}
+
+.product-grid .titolo{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .product-grid .product{

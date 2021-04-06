@@ -27,12 +27,17 @@ function search(){
 }
 
 function addFav(id){
-    var prefItem, prefGrid, btn;
+    var prefItem, prefGrid, cpyItem;
     prefGrid = document.getElementById('prefProd');
-    prefItem = document.getElementById('prodotto'+id);
-    
-    /*modificare onclick del button*/
-    prefGrid.appendChild(prefItem);
+    /*prefItem = document.getElementById('prodotto'+id);
+
+    var clone = prefItem.cloneNode(true);
+
+    prefGrid.appendChild(clone);*/
+
+    cpyItem = document.querySelector('#prodotto'+id);
+    console.log(cpyItem);
+    prefGrid.appendChild(cpyItem);
 }
 
 function remFav(id){
