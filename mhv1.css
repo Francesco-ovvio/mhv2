@@ -1,0 +1,412 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', sans-serif;
+    font-style: normal;
+    letter-spacing: 1px;
+    --answer-padding: 10px;
+}
+
+.trattino{
+    display: block;
+    background-image: url(https://i.imgur.com/vS3Cw2S.png);
+    background-repeat: repeat-x;
+    height: 20px;
+}
+
+p{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.menu,
+a, footer.address, h1{
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+body{
+    background-color: lightgray;
+    font-size: 14px;
+}
+
+header{
+    background-color: white;
+    background-image: url(https://i.imgur.com/NkSbYWY.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+    position: relative;
+    text-transform: uppercase;
+    margin: 10px;
+    margin-top: 0px;
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    background-image: url(https://i.imgur.com/ywHZ6cX.png);
+    background-repeat:repeat-x;
+    background-position: bottom;
+    background-attachment: local;
+}
+
+header h1{
+    line-height: 1.5;
+    text-align: center;
+    z-index: 2;
+}
+
+header h1 strong{
+    font-size: 4.25em;
+    letter-spacing: 4px;
+    text-shadow: 5px 5px 5px black
+}
+
+h1 a.button{
+    padding: 10px 15px;
+    border-radius: 100px;
+    background-color: rgb(77, 89, 13);
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+  
+h1 a.button:hover{
+    background-color: rgba(77, 89, 13, 0.75);
+    color: inherit;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* NavBar interattiva mobile per dispositivi touchscreen*/
+#mobile{
+    display: none;
+}
+
+.sidenav{
+    position:fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: rgb(204, 139, 65);
+    height: 100%;
+    width: 0;
+    z-index: 3;
+    transition: 0.5s;
+    padding-top: 15px;
+}
+
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover{
+    color: #818181;
+}
+
+.sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#burger{
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width:768px){
+    #mobile{
+        display: initial;
+    }
+}
+
+/* NavBar per dispositivi desktop*/
+nav{
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    right: 10px;
+    overflow: hidden;
+    background-color: rgba(77, 89, 13, .8);
+    border-radius: 30px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .875em;
+    padding: 15px;
+    z-index: 3;
+}
+
+.menu{  
+    display: flex;
+    justify-content: space-between;
+}
+
+.dx{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu a.button{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    padding: 10px 15px;
+    border: 2px solid white;
+    margin-right: 10px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.menu a.button:hover{
+    color: rgb(77, 89, 13);
+    background-color: white;
+}
+
+.logo{
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 30px;
+}
+
+/* Modelli in section per i vari "box" sul sito*/
+section{
+    font-weight: normal;
+    text-align: center;
+    font-size: 25px;        /*Questa sezione padre si ripeterà per tutte le sezioni*/
+    box-shadow: 10px 10px 5px gray;
+    color: rgb(77, 89, 13);
+    margin: 25px;
+    padding: 5px;
+}
+
+section.type-a{
+    background-color: rgba(77, 89, 13, .3);
+    border-radius: 20px;
+}
+
+section.type-a em{
+    font-family: 'Segoe UI', sans-serif;
+    font-style: oblique;
+}
+/* wrapper utilizzato per inserire i trattini nelle section "wheat", "sheep" e "slogan*/
+.warpflex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.type-b{
+    background-color: rgba(77, 89, 13, .3);
+    margin: 1em 125px 1em 125px;
+    border-radius: 20px;
+}
+
+section.type-b h1{
+    font-size: 1.5em;
+}
+
+section.type-b img{
+    border-radius: 20px;
+}
+
+section.type-c{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: none;
+    margin: 1em 70px 1em 70px;
+}
+
+section.type-c .dati{
+    background-color: rgba(77, 89, 13, .3);
+    border-radius: 20px;
+}
+
+section.type-c p strong{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*Impostazioni carrellata prodotti*/
+
+#icon{
+    height: 25px;
+    width: 25px;
+}
+
+#searchBar {
+    background-position: 10px 12px; 
+    background-repeat: no-repeat; 
+    width: 40%; 
+    font-size: 16px; 
+    padding: 12px 20px 12px 40px; 
+    border: 1px solid #ddd;
+    margin-bottom: 12px; 
+}
+
+#prefProd .product{
+    width:calc(20% - 2*var(--answer-padding));
+}
+.product-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.product-grid .titolo{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.product-grid .product{
+    width: calc(32.5% - 2*var(--answer-padding));
+    background-color: #f4f4f4;
+    border: 1px solid #dcdcdc;
+    border-radius: 20px;
+    padding: var(--answer-padding);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product h1{
+    color: rgb(77, 89, 13);
+    font-weight: bold;
+}
+
+#prefProd{
+    font-size: 50%;
+}
+
+#imgFav{
+    margin-top: 10px;
+}
+
+.product .btn{
+	background: rgb(77, 89, 13);
+	color: white;
+	padding: 0.3em 1em;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid white;
+    cursor: pointer;
+}
+
+.product .descr{
+    color: black;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: .6em;
+    text-align: left;
+    display: none;
+}
+
+/* Impostazioni del footer */
+.warpflex .foot{
+    flex-direction: column;
+}
+
+footer{
+    padding: 5px;
+    background-color: rgba(204, 139, 65, 0.8);
+    color: rgb(77, 89, 13);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+footer address, footer p{ 
+    padding: 2px 5px;
+}
+
+footer address{
+    font-family: 'Open Sans', sans-serif;
+    font-style: oblique;
+    font-size: 1.5em;
+}
+
+/*Parte per la combatibilià coi mobile*/
+@media (max-width: 768px){
+
+    section.type-a, section.type-b{
+        font-size: 14px;
+        margin: 25px;
+    }
+    section.type-b img{
+        width: 100%;
+    }
+    .warpflex, section.type-c{
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer address, footer p{
+        padding: .5em;
+        font-size: .75em;
+    }
+    .logo, .menu, .dx, .logopicc{
+        display: none;
+    }
+    header {
+        height: 300px;
+        line-height: 1.2;
+    }
+    header h1 strong {
+        font-size: 1.8em;
+        letter-spacing: 1px;
+    }
+    header::before{
+        background-image: none;
+    }
+    section.type-c p{
+        font-size: .65em;
+    }
+    label{
+        display: flex;
+    }
+}
+
+@media (max-width: 1600px) and (min-width: 767px){
+    .warpflex, section.type-c{
+        flex-direction: column;
+        justify-content: center;
+    }
+    section.type-b{
+        font-size: 1.5em;
+        margin: 25px;
+    }
+    section.type-b img{
+        width: 100%;
+    }
+    footer address, footer p{
+        padding: .5em;
+        font-size: .75em;
+    }
+}
+
